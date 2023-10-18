@@ -51,4 +51,14 @@
         <finalName>discovery-service</finalName>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+
+            <!-- REPLACE WITH YOUR GITHUB_USERNAME and GITHUB_REPONAME -->
+            <url>https://maven.pkg.github.com/github-actions-path/discovery-service</url>
+
+        </repository>
+    </distributionManagement>
 </project>
