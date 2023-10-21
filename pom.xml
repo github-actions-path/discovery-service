@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.syrisa.tr</groupId>
     <artifactId>discovery-service</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.3</version>
     <name>discovery-service</name>
     <description>discovery-service</description>
     <properties>
