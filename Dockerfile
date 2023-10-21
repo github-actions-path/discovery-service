@@ -1,4 +1,4 @@
-FROM maven:3.6.3-jdk-17-slim AS build
+FROM maven:3.6.3-openjdk-17-slim AS build
 LABEL authors="isasayar"
 COPY src /usr/src/app/src
 COPY pom.xml /usr/src/app
