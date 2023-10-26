@@ -18,21 +18,20 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: syr-org-v1
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-    - name: Set up JDK 17
-      uses: actions/setup-java@v3
-      with:
-        java-version: '17'
-        distribution: 'corretto'
-        cache: maven
+    #- name: Checkout
+    #  uses: actions/checkout@v3
+    #- name: Set up JDK 17
+    #  uses: actions/setup-java@v3
+    #  with:
+    #    java-version: '17'
+    #    distribution: 'corretto'
+    #    cache: maven
     - name: Get Version from pom.xml
       id: get_version
       run: echo ::set-output name=VERSION::$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
-
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Build and push docker image
