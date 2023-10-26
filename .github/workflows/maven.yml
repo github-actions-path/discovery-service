@@ -38,9 +38,8 @@ jobs:
       run: |
         docker build -t ${{ secrets.DOCKER_USERNAME }}/${{ github.repository }}:${{ steps.get_version.outputs.VERSION }} .
         echo "${{ secrets.DOCKER_PASSWORD }}" | docker login --username ${{ secrets.DOCKER_USERNAME }} --password-stdin https://index.docker.io/v1/
-    #    docker login -t 0 https://index.docker.io/v1/
-
         docker push  ${{ secrets.DOCKER_USERNAME }}/${{ github.repository }}:${{ steps.get_version.outputs.VERSION }}
+    #    docker login -t 0 https://index.docker.io/v1/
     #    docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin ${{ secrets.DOCKER_PASSWORD }}
 
 
